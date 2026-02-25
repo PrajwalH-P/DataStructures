@@ -27,10 +27,10 @@ public class ArrayFrequencyCount {
 			for(int key:map.keySet()) {
 				if(map.get(key)>frq) {
 					mfe = key;
-					frq = map.get(key);
+					frq = map.get(key); 
 				}
 			}
-			System.out.println(map);
+			System.out.println(map); 
 			System.out.println("Most Frequently used element is : "+mfe);
 	}
 }
