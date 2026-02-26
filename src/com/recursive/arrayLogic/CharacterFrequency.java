@@ -9,26 +9,25 @@ public class CharacterFrequency {
 		getCharacterFrequency(str);
 	}
 
-	public  static void getCharacterFrequency(String str) {
-			TreeMap<Character, Integer> map = new TreeMap<Character, Integer>();
-			int repeatedTimes = 0;
-		
-			char[] c = str.toCharArray();
-			char mfe = c[0];
-			for(char ch:c) {
-				map.put(ch, map.getOrDefault(ch, 0)+1);
-				
+	public static void getCharacterFrequency(String str) {
+		TreeMap<Character, Integer> map = new TreeMap<Character, Integer>();
+		int repeatedTimes = 0;
+
+		char[] c = str.toCharArray();
+		char mfe = c[0];
+		for (char ch : c) {
+			map.put(ch, map.getOrDefault(ch, 0) + 1);
+
+		}
+		for (char key : map.keySet()) {
+			if (repeatedTimes < map.get(key)) {
+				mfe = key;
+				repeatedTimes = map.get(key);
 			}
-			for(char key:map.keySet()) {
-				if(repeatedTimes<map.get(key)) {
-					mfe = key;
-					repeatedTimes=map.get(key);
-				}
-			}
-System.out.println(mfe);
-			System.out.println(map);
-			System.out.println(repeatedTimes);
+		}
+		System.out.println(mfe);
+		System.out.println(map);
+		System.out.println(repeatedTimes);
 	}
 
 }
- 
